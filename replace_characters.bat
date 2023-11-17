@@ -41,7 +41,7 @@ set "filePath="
 set "forOption="
 
 rem  assign directory
-if "%~1"=="-f" (set "filePath=%~2\" & shift & shift)
+if "%~1"=="-f" (set "filePath=%~2" & shift & shift)
 
 rem  tree (applies to directory if called)
 if "%~1"=="-t" (set "forOption=/R %filePath%" & set "filePath=" & shift)
