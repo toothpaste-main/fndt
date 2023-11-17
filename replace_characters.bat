@@ -8,10 +8,10 @@ rem Credit to dbenham for the for loop
 rem https://stackoverflow.com/a/11278987
 
 rem  Parameters (order matters!):
-rem  [-w] [-f] [FolderPath] [-t] [-d] [delim] [-s] [newDelim]
+rem  [-w] [-f] [filePath] [-t] [-d] [delim] [-s] [newDelim]
 
 rem  [-w]		skip the warning messages
-rem  [-f] [inPath]	specify directory (self by default)
+rem  [-f] [filepath]	specify directory (self by default)
 rem  [-t]		apply to subdirectories (t for tree)
 rem  [-d] [delim]	assign delimiter (" " by default)
 rem  [-s] [newDelim]	assign replacement delimiter ("" by default)
@@ -37,14 +37,14 @@ rem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 setlocal disableDelayedExpansion
 
 rem  initalize path
-set "inPath="
+set "filePath="
 set "forOption="
 
 rem  assign directory
-if "%~1"=="-f" (set "inPath=%~2\" & shift & shift)
+if "%~1"=="-f" (set "filePath=%~2\" & shift & shift)
 
 rem  tree (applies to directory if called)
-if "%~1"=="-t" (set "forOption=/R %inPath%" & set "inPath=" & shift)
+if "%~1"=="-t" (set "forOption=/R %filePath%" & set "filePath=" & shift)
 
 rem  assign delimiter
 if "%~1"=="-d" (set "delim=%~2" & shift & shift) else (set "delim= ")
@@ -53,7 +53,7 @@ rem  assign replacement delimiter (or string)
 if "%~1"=="-s" (set "token=%~2" & shift & shift) else (set "newDelim=")
 
 rem  replace spaces
-for %forOption% %%F in ("%inPath%*%delim%*") do (
+for %forOption% %%F in ("%filePath%*%delim%*") do (
   if /i "%~f0" neq "%%~fF" (
     set "folder=%%~dpF"
     set "file=%%~nxF"
