@@ -13,9 +13,13 @@ Credits to [dbenham's post](https://stackoverflow.com/a/11278987) on Stackoverfl
 > Parameters are not required, **but they must be given in order**.
 
 1. `-w` skip the warning messages
+
 2. `-f [filePath]` specify directory (in place by default)
+
 3. `-t` apply to subdirectories (t for tree)
+
 4. `-d [delim]` aasign delimiter (" " by default)
+
 5. `-s [newDelim]` assign replacement delimiter ("" by default)
 
 ## Basic Instructions
@@ -32,8 +36,10 @@ Credits to [dbenham's post](https://stackoverflow.com/a/11278987) on Stackoverfl
 ### In place
 
 1. In File Explorer, navigate the the directory of the files you want to modify.
-2. Paste `replace_characters.bat`.
-3. In the File Explorer search tree, replace the text with `cmd` and hit Enter to open Command Prompt in the current directory[^2].
+
+3. Paste `replace_characters.bat`.
+
+4. In the File Explorer search tree, replace the text with `cmd` and hit Enter to open Command Prompt in the current directory[^2].
 
 To change the replacement delimiter to "_", run:
 ```
