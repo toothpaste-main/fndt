@@ -1,6 +1,11 @@
+@echo off
+
 rem  This program replaces characters in the file names of a directory.
 rem  This is useful if you want to remove spaces from file names or 
 rem  replace "-" with "_".
+
+rem Credit to dbenham for the for loop
+rem https://stackoverflow.com/a/11278987
 
 rem  Parameters (order matters!):
 rem  [-w] [-f] [FolderPath] [-t] [-d] [delim] [-s] [newDelim]
@@ -12,12 +17,11 @@ rem  [-d] [delim]	assign delimiter (" " by default)
 rem  [-s] [newDelim]	assign new delimiter ("" by default)
 
 rem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-@echo off
 
 rem  check to skip warning
-if "%~1"=="-w" (GOTO routine & shift)
+if "%~1"=="-w" (GOTO routine & shift) else (GOTO warning)
 
-rem  warning
+:warning
 echo Are you sure you would like to rename these files?
 pause
 
@@ -59,6 +63,8 @@ for %forOption% %%F in ("%inPath%*%delim%*") do (
     endlocal
   )
 )
+
+rem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 echo Done
 pause
