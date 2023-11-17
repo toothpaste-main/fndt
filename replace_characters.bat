@@ -14,7 +14,7 @@ rem  [-w]		skip the warning messages
 rem  [-f] [inPath]	specify directory (self by default)
 rem  [-t]		apply to subdirectories (t for tree)
 rem  [-d] [delim]	assign delimiter (" " by default)
-rem  [-s] [newDelim]	assign new delimiter ("" by default)
+rem  [-s] [newDelim]	assign replacement delimiter ("" by default)
 
 rem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -36,7 +36,7 @@ rem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :routine
 setlocal disableDelayedExpansion
 
-rem  assign empty forOption
+rem  initalize path
 set "inPath="
 set "forOption="
 
@@ -49,7 +49,7 @@ if "%~1"=="-t" (set "forOption=/R %inPath%" & set "inPath=" &shift)
 rem  assign delimiter
 if "%~1"=="-d" (set "delim=%~2" & shift & shift) else (set "delim= ")
 
-rem  assign replacement character (or string)
+rem  assign replacement delimiter (or string)
 if "%~1"=="-s" (set "token=%~2" & shift & shift) else (set "newDelim=")
 
 rem  replace spaces
