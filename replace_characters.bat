@@ -44,7 +44,7 @@ rem  assign directory
 if "%~1"=="-f" (set "inPath=%~2\" & shift & shift)
 
 rem  tree (does only directory if uncalled)
-if "%~1"=="-t" (set "forOption=/R %inPath%" & set "inPath=" &shift)
+if "%~1"=="-t" (set "forOption=/R %inPath%" & set "inPath=" & shift)
 
 rem  assign delimiter
 if "%~1"=="-d" (set "delim=%~2" & shift & shift) else (set "delim= ")
