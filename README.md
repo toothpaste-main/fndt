@@ -114,13 +114,13 @@ if "%~1"=="-s" (set "token=%~2" & shift & shift) else (set "newDelim=_")
 To invert `-t` such that the script applies to subdirectories by default, replace:
 ```
 rem  tree (applies to directory if called)
-if "%~1"=="-t" (set "forOption=/R %inPath%" & set "inPath=" & shift)
+if "%~1"=="-t" (set "forOption=/R %filePath%" & set "filePath=" & shift)
 ```
 
 With:
 ```
 rem  tree (applies to directory if uncalled)
-if "%~1"=="-t" (shift) else (set "forOption=/R %inPath%" & set "inPath=")
+if "%~1"=="-t" (shift) else (set "forOption=/R %filePath%" & set "filePath=")
 ```
 
 
