@@ -29,7 +29,7 @@ Credits to [dbenham's post](https://stackoverflow.com/a/11278987) on Stackoverfl
 2.  Double-click `replace_characters.bat` to run script and follow instructions on Command Prompt (if applicable)
 
 > [!CAUTION]
-> This script will modify *all* files in teh directory and the changes cannot be undone!
+> This script will modify *all* files in the directory and the changes cannot be undone!
 
 ## Advanced Instructions (using command prompt)
 
@@ -48,7 +48,7 @@ replace_characters.bat -s _
 
 To change the replacement delimiter to "_" in the current directory and *all* subdirectories, run:
 ```
-replace_characters.bat -t -s
+replace_characters.bat -t -s _
 ```
 
 To change the delimiter to "-" and replacement delimiter to "_", run:
@@ -59,6 +59,7 @@ replace_characters.bat -d - -s _
 ### In another place
 
 1. In File Explorer, navigate the the directory of  `replace_characters.bat`.
+
 2. In the File Explorer search tree, replace the text with `cmd` and hit Enter to open Command Prompt in the current directory[^2].
 
 To modify file names in another directory, run:
