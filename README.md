@@ -1,9 +1,9 @@
-# replace_characters
-`replace_character.bat` is a batch script to replace characters in the file names of a directory. Its intended use is to remove spaces from file names and replace them with "_".
+# File Name Delimiter Tool
+`fndt.bat` is a batch script to replace characters in the file names of a directory. Its intended use is to remove spaces from file names and replace them with "_".
 
 ### Credits
 
-Credits to [dbenham's post](https://stackoverflow.com/a/11278987) on Stackoverflow. `replace_characters.bat` is based on a heavily modified version of their script.
+Credits to [dbenham's post](https://stackoverflow.com/a/11278987) on Stackoverflow. `fndt.bat` is based on a heavily modified version of their script.
 
 # Quick Start guide
 
@@ -24,9 +24,9 @@ Credits to [dbenham's post](https://stackoverflow.com/a/11278987) on Stackoverfl
 
 ## Basic Instructions
 
-1. Paste `replace_characters.bat` in the directory of the files you wish to modify.
+1. Paste `fndt.bat` in the directory of the files you wish to modify.
 
-2.  Double-click `replace_characters.bat` to run script and follow instructions on Command Prompt (if applicable)
+2.  Double-click `fndt.bat` to run script and follow instructions on Command Prompt (if applicable)
 
 > [!CAUTION]
 > This script will modify *all* files in the directory and the changes cannot be undone!
@@ -37,34 +37,34 @@ Credits to [dbenham's post](https://stackoverflow.com/a/11278987) on Stackoverfl
 
 1. In File Explorer, navigate the the directory of the files you want to modify.
 
-3. Paste `replace_characters.bat`.
+3. Paste `fndt.bat`.
 
 4. In the File Explorer search tree, replace the text with `cmd` and hit Enter to open Command Prompt in the current directory[^2].
 
 To change the replacement delimiter to "_", run:
 ```
-replace_characters.bat -s _
+fndt.bat -s _
 ```
 
 To change the replacement delimiter to "_" in the current directory and *all* subdirectories, run:
 ```
-replace_characters.bat -t -s _
+fndt.bat -t -s _
 ```
 
 To change the delimiter to "-" and replacement delimiter to "_", run:
 ```
-replace_characters.bat -d - -s _
+fndt.bat -d - -s _
 ```
 
 ### In another place
 
-1. In File Explorer, navigate the the directory of  `replace_characters.bat`.
+1. In File Explorer, navigate the the directory of  `fndt.bat`.
 
 2. In the File Explorer search tree, replace the text with `cmd` and hit Enter to open Command Prompt in the current directory[^2].
 
 To modify file names in another directory, run:
 ```
-replace_characters.bat -f C:\my_path\my_directory\
+fndt.bat -f C:\my_path\my_directory\
 ```
 
 > [!IMPORTANT]
@@ -72,10 +72,10 @@ replace_characters.bat -f C:\my_path\my_directory\
 
 To skip the warning prompts, modify file names in another directory, and change delimiter to "_", run:
 ```
-replace_characters.bat -w -f C:\my_path\my_directory\ -s _
+fndt.bat -w -f C:\my_path\my_directory\ -s _
 ```
 
-# Modifying `replace_characters.bat`
+# Modifying `fndt.bat`
 
 ## Changing Defaults
 
