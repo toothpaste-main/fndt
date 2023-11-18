@@ -1,5 +1,7 @@
 @echo off
 
+rem  File Name Delimiter Tool
+
 rem  This program replaces characters in the file names of a directory.
 rem  This is useful if you want to remove spaces from file names or 
 rem  replace "-" with "_".
