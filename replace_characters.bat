@@ -19,7 +19,7 @@ rem  [-s] [newDelim]	assign replacement delimiter ("" by default)
 rem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 rem  check to skip warning
-if "%~1"=="-w" (GOTO routine & shift) else (GOTO warning)
+if "%~1"=="-w" (shift & GOTO routine) else (GOTO warning)
 
 :warning
 echo Are you sure you would like to rename these files?
@@ -32,6 +32,8 @@ echo THIS IS YOUR LAST WARNING
 pause
 
 rem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 :routine
 setlocal disableDelayedExpansion
